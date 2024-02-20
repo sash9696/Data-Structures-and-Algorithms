@@ -40,7 +40,7 @@ void print2Alt(int n)
 }
 void print3(int n)
 {
-    for (int i = 1; i <=n; i++)
+    for (int i = 1; i <= n; i++)
     {
 
         for (int j = 1; j <= i; j++)
@@ -50,6 +50,33 @@ void print3(int n)
         cout << endl;
     }
 }
+
+void print4(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+
+        for (int j = 1; j <= i; j++)
+        {
+            cout << i << " ";
+        }
+        cout << endl;
+    }
+}
+
+void print5(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     // test case;
@@ -64,7 +91,9 @@ int main()
         // print1(n);
         // print2(n);
         // print2Alt(n);
-        print3(n);
+        // print3(n);
+        // print4(n);
+        print5(n);
     }
 
     return 0;

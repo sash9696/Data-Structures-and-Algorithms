@@ -133,6 +133,12 @@ void print8(int n)
     }
 }
 
+void print9(int n)
+{
+   print7(n);
+   print8(n);
+}
+
 int main()
 {
     // test case;
@@ -152,7 +158,8 @@ int main()
         // print5(n);
         // print6(n);
         // print7(n);
-        print8(n);
+        // print8(n);
+        print9(n);
     }
 
     return 0;

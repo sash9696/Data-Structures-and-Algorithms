@@ -160,16 +160,19 @@ void print10(int n)
 
 void print11(int n)
 {
+    // mix of right angle triangle and filipping of 0 and 1
    for(int i = 1 ; i<= n;i++){
 
     int start = 1;
 
     if(i % 2==0) start = 1;
     else start = 0;
+    //for even rows starting with 1
 
     for(int j = 1; j <=i; j++){
        cout<<start;
        start = 1 - start;
+       //flipping 1 to 0 or 0 to 1
     }
 
     cout<<endl;

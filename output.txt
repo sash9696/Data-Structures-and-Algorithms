@@ -1,4 +1,2 @@
 Input num is 1000
-Input num is 1000
-reverse of input  num is 1
 0

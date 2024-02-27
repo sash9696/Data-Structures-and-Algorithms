@@ -41,20 +41,17 @@ using namespace std;
 //     return false;
 
 // }
-bool reverseNum(int x){
+bool armstrongCheck(int x){
     int duplicate = x;
-    int revNum=0;
+    int sum=0;
     while(x > 0){
         int lastDigit = x % 10;
         x = x / 10;
 
-        revNum = (revNum * 10) + lastDigit;
+        sum  = sum + lastDigit*lastDigit*lastDigit;
     }
-        cout << "Input num is " << duplicate << endl;
-
-    cout << "reverse of input  num is " << revNum << endl;
-
-    if(revNum == duplicate) return true;
+      
+    if(sum == duplicate) return true;
     return false;
 
 }
@@ -66,7 +63,7 @@ int main(){
     // extractDigits(x);
 //    int isPalindrome =  reverseNum(x);
 //    cout << isPalindrome;
-int isArmstrong =  reverseNum(x);
+int isArmstrong =  armstrongCheck(x);
    cout << isArmstrong;
     return 0;
 }

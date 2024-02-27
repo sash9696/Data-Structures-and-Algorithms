@@ -1,7 +1,4 @@
 Input num is 1000
+Input num is 1000
+reverse of input  num is 1
 0
-0
-0
-1
-the no of digits are: 4
-the reverse of the number is: 1

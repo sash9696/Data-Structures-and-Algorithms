@@ -1,5 +1,7 @@
-Input num is 7789
-9
-8
-7
-7
+Input num is 1000
+0
+0
+0
+1
+the no of digits are: 4
+the reverse of the number is: 1

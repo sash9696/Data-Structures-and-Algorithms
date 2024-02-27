@@ -24,6 +24,23 @@ using namespace std;
 //     cout << "the reverse of the number is: " <<reverseNum;
 
 // }
+// bool reverseNum(int x){
+//     int duplicate = x;
+//     int revNum=0;
+//     while(x > 0){
+//         int lastDigit = x % 10;
+//         x = x / 10;
+
+//         revNum = (revNum * 10) + lastDigit;
+//     }
+//         cout << "Input num is " << duplicate << endl;
+
+//     cout << "reverse of input  num is " << revNum << endl;
+
+//     if(revNum == duplicate) return true;
+//     return false;
+
+// }
 bool reverseNum(int x){
     int duplicate = x;
     int revNum=0;
@@ -47,8 +64,9 @@ int main(){
     cout << "Input num is " << x << endl;
 
     // extractDigits(x);
-   int isPalindrome =  reverseNum(x);
-   cout << isPalindrome;
-
+//    int isPalindrome =  reverseNum(x);
+//    cout << isPalindrome;
+int isArmstrong =  reverseNum(x);
+   cout << isArmstrong;
     return 0;
 }

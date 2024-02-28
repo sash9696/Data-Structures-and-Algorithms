@@ -109,6 +109,22 @@ void printAllDivisorsOpt(int x){
     //time complexity => O(n)
 
 }
+
+void isPrime(int x){
+    //brute force O(n)
+    int count = 0;
+    for(int i=1; i <=x ; i++){
+
+        if(x % i == 0){
+            count ++;
+
+        }
+
+    }
+
+        if(count == 2) cout << true;
+        else cout << false;
+}
 int main()
 {
     int x;
@@ -121,6 +137,7 @@ int main()
     // int isArmstrong = armstrongCheck(x);
     // cout << isArmstrong;
     // printAllDivisors(x);
-    printAllDivisorsOpt(x);
+    // printAllDivisorsOpt(x);
+    isPrime(x);
     return 0;
 }

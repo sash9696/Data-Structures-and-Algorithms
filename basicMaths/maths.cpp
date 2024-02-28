@@ -60,7 +60,18 @@ using namespace std;
 
 void printAllDivisors(int x){
 
-    
+    cout << "The divisors of " << x << " are: " << endl;
+
+    for(int i = 1; i <= x; i++){
+
+        if(x % i == 0){
+            cout << i << " ";
+        }
+
+    }
+
+    //time complexity => O(n)
+
 }
 int main()
 {

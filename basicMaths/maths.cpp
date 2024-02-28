@@ -1,6 +1,7 @@
 
 
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -73,6 +74,41 @@ void printAllDivisors(int x){
     //time complexity => O(n)
 
 }
+
+void printAllDivisorsOpt(int x){
+
+    cout << "The divisors of " << x << " are: " << endl;
+
+       vector<int> ls;
+
+
+
+    for(int i = 1; i*i <= x; i++){
+
+        //Time complexity-> O(sqrt(n))
+        if(x % i == 0){
+            // cout << i << " ";
+            ls.push_back(i);
+            if(i != x/i){
+                cout<< x/i << " ";
+                // ls.push_back(x/i);
+
+            }
+        }
+
+    }
+
+        //Time complexity-> O(no of factors * log(no of factors))
+
+    sort(ls.begin(), ls.end());
+
+        //Time complexity-> O(no of factors)
+
+    for(auto it:ls) cout << it << " ";
+
+    //time complexity => O(n)
+
+}
 int main()
 {
     int x;
@@ -84,6 +120,7 @@ int main()
     //    cout << isPalindrome;
     // int isArmstrong = armstrongCheck(x);
     // cout << isArmstrong;
-    printAllDivisors(x);
+    // printAllDivisors(x);
+    printAllDivisorsOpt(x);
     return 0;
 }

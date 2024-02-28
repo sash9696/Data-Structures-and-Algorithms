@@ -125,6 +125,26 @@ void isPrime(int x){
         if(count == 2) cout << true;
         else cout << false;
 }
+
+void isPrimeOpt(int x){
+    //brute force O(sqrt(n))
+    int count = 0;
+    for(int i=1; i*i <=x ; i++){
+
+        if(x % i == 0){
+            count ++;
+
+            if(x/i != i){
+                count ++;
+            }
+
+        }
+
+    }
+
+        if(count == 2) cout << true;
+        else cout << false;
+}
 int main()
 {
     int x;
@@ -138,6 +158,7 @@ int main()
     // cout << isArmstrong;
     // printAllDivisors(x);
     // printAllDivisorsOpt(x);
-    isPrime(x);
+    // isPrime(x);
+    isPrimeOpt(x);
     return 0;
 }

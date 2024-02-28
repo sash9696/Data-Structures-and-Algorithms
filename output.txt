@@ -1,2 +1,2 @@
-Input num is 11
-1
+Input num is 36
+0

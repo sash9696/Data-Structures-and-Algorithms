@@ -41,21 +41,26 @@ using namespace std;
 //     return false;
 
 // }
-bool armstrongCheck(int x)
-{
-    int duplicate = x;
-    int sum = 0;
-    while (x > 0)
-    {
-        int lastDigit = x % 10;
-        x = x / 10;
+// bool armstrongCheck(int x)
+// {
+//     int duplicate = x;
+//     int sum = 0;
+//     while (x > 0)
+//     {
+//         int lastDigit = x % 10;
+//         x = x / 10;
 
-        sum = sum + lastDigit * lastDigit * lastDigit;
-    }
+//         sum = sum + lastDigit * lastDigit * lastDigit;
+//     }
 
-    if (sum == duplicate)
-        return true;
-    return false;
+//     if (sum == duplicate)
+//         return true;
+//     return false;
+// }
+
+void printAllDivisors(int x){
+
+    
 }
 int main()
 {
@@ -66,7 +71,8 @@ int main()
     // extractDigits(x);
     //    int isPalindrome =  reverseNum(x);
     //    cout << isPalindrome;
-    int isArmstrong = armstrongCheck(x);
-    cout << isArmstrong;
+    // int isArmstrong = armstrongCheck(x);
+    // cout << isArmstrong;
+    printAllDivisors(x);
     return 0;
 }

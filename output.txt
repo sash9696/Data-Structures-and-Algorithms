@@ -1,2 +1,2 @@
-Input num is 1000
-0
+Input num is 371
+1

@@ -59,97 +59,105 @@ using namespace std;
 //     return false;
 // }
 
-void printAllDivisors(int x){
+void printAllDivisors(int x)
+{
 
     cout << "The divisors of " << x << " are: " << endl;
 
-    for(int i = 1; i <= x; i++){
+    for (int i = 1; i <= x; i++)
+    {
 
-        if(x % i == 0){
+        if (x % i == 0)
+        {
             cout << i << " ";
         }
-
     }
 
-    //time complexity => O(n)
-
+    // time complexity => O(n)
 }
 
-void printAllDivisorsOpt(int x){
+void printAllDivisorsOpt(int x)
+{
 
     cout << "The divisors of " << x << " are: " << endl;
 
-       vector<int> ls;
+    vector<int> ls;
 
+    for (int i = 1; i * i <= x; i++)
+    {
 
-
-    for(int i = 1; i*i <= x; i++){
-
-        //Time complexity-> O(sqrt(n))
-        if(x % i == 0){
+        // Time complexity-> O(sqrt(n))
+        if (x % i == 0)
+        {
             // cout << i << " ";
             ls.push_back(i);
-            if(i != x/i){
-                cout<< x/i << " ";
+            if (i != x / i)
+            {
+                cout << x / i << " ";
                 // ls.push_back(x/i);
-
             }
         }
-
     }
 
-        //Time complexity-> O(no of factors * log(no of factors))
+    // Time complexity-> O(no of factors * log(no of factors))
 
     sort(ls.begin(), ls.end());
 
-        //Time complexity-> O(no of factors)
+    // Time complexity-> O(no of factors)
 
-    for(auto it:ls) cout << it << " ";
+    for (auto it : ls)
+        cout << it << " ";
 
-    //time complexity => O(n)
-
+    // time complexity => O(n)
 }
 
-void isPrime(int x){
-    //brute force O(n)
+void isPrime(int x)
+{
+    // brute force O(n)
     int count = 0;
-    for(int i=1; i <=x ; i++){
+    for (int i = 1; i <= x; i++)
+    {
 
-        if(x % i == 0){
-            count ++;
-
+        if (x % i == 0)
+        {
+            count++;
         }
-
     }
 
-        if(count == 2) cout << true;
-        else cout << false;
+    if (count == 2)
+        cout << true;
+    else
+        cout << false;
 }
 
-void isPrimeOpt(int x){
-    //brute force O(sqrt(n))
+void isPrimeOpt(int x)
+{
+    // brute force O(sqrt(n))
     int count = 0;
-    for(int i=1; i*i <=x ; i++){
+    for (int i = 1; i * i <= x; i++)
+    {
 
-        if(x % i == 0){
-            count ++;
+        if (x % i == 0)
+        {
+            count++;
 
-            if(x/i != i){
-                count ++;
+            if (x / i != i)
+            {
+                count++;
             }
-
         }
-
     }
 
-        if(count == 2) cout << true;
-        else cout << false;
+    if (count == 2)
+        cout << true;
+    else
+        cout << false;
 }
 int main()
 {
-    int x;
-    cin >> x;
-    cout << "Input num is " << x << endl;
+    // int x;
+    // cin >> x;
+    // cout << "Input num is " << x << endl;
 
     // extractDigits(x);
     //    int isPalindrome =  reverseNum(x);
@@ -159,6 +167,14 @@ int main()
     // printAllDivisors(x);
     // printAllDivisorsOpt(x);
     // isPrime(x);
-    isPrimeOpt(x);
+    // isPrimeOpt(x);
+
+    int a;
+    int b;
+    cin >> a;
+    cin >> b;
+    cout << "Input num is " << a << endl;
+    cout << "Input num is " << b << endl;
+
     return 0;
 }

@@ -156,7 +156,7 @@ void isPrimeOpt(int x)
 
 void gcf(int a, int b)
 {
-    //time complexity O(min(a,b))
+    // time complexity O(min(a,b))
 
     int result;
 
@@ -173,7 +173,35 @@ void gcf(int a, int b)
     cout << "The gcf of " << a << ", " << b << " is: " << result;
 }
 
+void gcfOpt(int a, int b)
+{
+    // time complexity O(min(a,b))
+    // ecucledian algo
+    // gcf(a,b) == gcf(a-b, b); where  a > b
 
+    // modified eucledian algo
+    // gcf(a,b) == gcf(a%b, b) a > b
+    // one will become zero other will be gcf
+
+    int result;
+
+    while (a > 0 && b > 0)
+    {
+
+        if (a > b)
+        {
+            a = a % b;
+        }
+        else
+        {
+            b = b % a;
+        }
+    }
+    if (a == 0)
+        cout << "The gcf is: " << b;
+    else
+        cout << "The gcf is: " << a;
+}
 int main()
 {
     // int x;
@@ -198,7 +226,7 @@ int main()
     cout << "Input num is " << b << endl;
 
     // gcf(a, b);
-    gcfOpt(a,b);
+    gcfOpt(a, b);
 
     return 0;
 }

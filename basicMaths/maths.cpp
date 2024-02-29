@@ -153,6 +153,27 @@ void isPrimeOpt(int x)
     else
         cout << false;
 }
+
+void gcf(int a, int b)
+{
+    //time complexity O(min(a,b))
+
+    int result;
+
+    for (int i = 1; i <= min(a, b); i++)
+    {
+        cout << i;
+
+        if (a % i == 0 && b % i == 0)
+        {
+            result = i;
+        }
+    }
+
+    cout << "The gcf of " << a << ", " << b << " is: " << result;
+}
+
+
 int main()
 {
     // int x;
@@ -175,6 +196,9 @@ int main()
     cin >> b;
     cout << "Input num is " << a << endl;
     cout << "Input num is " << b << endl;
+
+    // gcf(a, b);
+    gcfOpt(a,b);
 
     return 0;
 }

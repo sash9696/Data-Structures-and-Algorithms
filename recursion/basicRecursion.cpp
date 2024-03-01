@@ -40,6 +40,17 @@ void printNTo1(int i, int n)
     printNTo1(i, n - 1);
 }
 
+void print1ToNBack(int i, int n){
+
+
+    if(i < 1){
+        return;
+    }
+
+    print1ToNBack(i - 1, n);
+    cout << i << endl; 
+}
+
 int main()
 {
 
@@ -51,5 +62,6 @@ int main()
 
     // printName(1,n);
     // print1ToN(1,n);
-    printNTo1(1, n);
+    // printNTo1(1, n);
+    print1ToNBack(n,n);
 }

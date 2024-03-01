@@ -1,3 +1,11 @@
-Input num is 52
-Input num is 10
-The gcf is: 2
+The input num is : 10
+Raj
+Raj
+Raj
+Raj
+Raj
+Raj
+Raj
+Raj
+Raj
+Raj

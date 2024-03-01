@@ -6,6 +6,9 @@ using namespace std;
 
 void printName(int i, int n){
 
+    //TC => O(n) => n+1 function calls
+    //SC => O(n) => stack space
+
     if(i > n){
         return;
     }

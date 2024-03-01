@@ -16,6 +16,14 @@ void printName(int i, int n){
      printName(i+1, n);
 }
 
+void print1ToN(int i , int n){
+
+    if(i > n){
+        return;
+    }
+    cout<< i << endl;
+    print1ToN(i+1,n);
+}
 
 
 int main(){
@@ -26,5 +34,7 @@ int main(){
 
     cout << "The input num is : " << n << endl;
 
-    printName(1,n);
+    // printName(1,n);
+        print1ToN(1,n);
+
 }

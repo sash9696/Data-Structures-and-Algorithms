@@ -94,6 +94,8 @@ void factorialParameterized(int i, int result){
 
 int factorialFunctional(int n){
 
+    //TC => O(n)
+    //SC => stack space => O(n)
     if( n == 0){
         return 1;
     }
@@ -121,7 +123,7 @@ int main()
     // sumOfNNumsParameterized(n, 0);
     // cout <<  "sumOfNNumsFuntional: " << sumOfNNumsFuntional(n) << endl;
     // factorialParameterized(n, 1);
-    cout << factorialFunctional(n);
+    // cout << factorialFunctional(n);
 
 
 }

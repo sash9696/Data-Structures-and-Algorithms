@@ -72,6 +72,16 @@ void sumOfNNumsParameterized(int i, int sum){
 
 }
 
+int sumOfNNumsFuntional(int n){
+
+    if (n == 0 ){
+        return 0;
+    }
+
+    return n + sumOfNNumsFuntional(n - 1);
+
+}
+
 int main()
 {
 
@@ -86,6 +96,7 @@ int main()
     // printNTo1(1, n);
     // print1ToNBack(n,n);
     // printNTo1Back(1,n);
-    sumOfNNumsParameterized(n, 0);
+    // sumOfNNumsParameterized(n, 0);
+    cout <<  "sumOfNNumsFuntional: " << sumOfNNumsFuntional(n) << endl;
 
 }

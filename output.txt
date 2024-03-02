@@ -1,2 +1,2 @@
 The input num is : 3
-6
+sumOfNNumsFuntional: 6

@@ -140,6 +140,18 @@ void reverseAnArrayRecursionTwoPointers(int i, int arr[], int n)
     reverseAnArrayRecursionTwoPointers(i, arr, n);
 }
 
+void reverseAnArrayRecursionSinglePointer(int i, int arr[], int n)
+{
+
+    if (i >= n / 2)
+        return;
+    // swap arr[i], arr[n-i-1]
+    int temp = arr[i];
+    arr[i] = arr[n - i - 1];
+    arr[n - i - 1] = temp;
+
+    reverseAnArrayRecursionSinglePointer(i + 1, arr, n);
+}
 int main()
 {
 
@@ -177,7 +189,9 @@ int main()
     // factorialParameterized(n, 1);
     // cout << factorialFunctional(n);
 
-    reverseAnArrayRecursionTwoPointers(0, arr, n);
+    // reverseAnArrayRecursionTwoPointers(0, arr, n);
+    reverseAnArrayRecursionSinglePointer(0, arr, n);
+
     cout << "Reverse array: " << endl;
 
     for (int x : arr)

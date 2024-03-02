@@ -61,6 +61,17 @@ void printNTo1Back(int i , int n){
     cout << i << endl;
 }
 
+void sumOfNNumsParameterized(int i, int sum){
+
+    if(i < 1){
+        cout << sum << endl;
+        return ;
+    }
+
+    sumOfNNumsParameterized(i -1 , sum + i);
+
+}
+
 int main()
 {
 
@@ -74,5 +85,7 @@ int main()
     // print1ToN(1,n);
     // printNTo1(1, n);
     // print1ToNBack(n,n);
-    printNTo1Back(1,n);
+    // printNTo1Back(1,n);
+    sumOfNNumsParameterized(n, 0);
+
 }

@@ -1,6 +1,2 @@
-The input num is : 5
-5
-4
-3
-2
-1
+The input num is : 3
+6

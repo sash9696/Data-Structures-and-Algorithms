@@ -106,6 +106,10 @@ int factorialFunctional(int n){
     return n * factorialFunctional(n-1);
 }
 
+void  reverseAnArrayRecursionTwoPointers(){
+
+}
+
 int main()
 {
 
@@ -114,6 +118,12 @@ int main()
     cin >> n;
 
     cout << "The input num is : " << n << endl;
+
+    int arr[n];
+
+    for(int x : arr){
+        cout << x << endl;
+    }
 
     // printName(1,n);
     // print1ToN(1,n);
@@ -124,6 +134,8 @@ int main()
     // cout <<  "sumOfNNumsFuntional: " << sumOfNNumsFuntional(n) << endl;
     // factorialParameterized(n, 1);
     // cout << factorialFunctional(n);
+
+    reverseAnArrayRecursionTwoPointers();
 
 
 }

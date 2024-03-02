@@ -1,2 +1,6 @@
-The input num is : 0
+The input num is : 5
+141094432
 1
+1332534448
+32760
+-1215875792

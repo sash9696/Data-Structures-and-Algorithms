@@ -1,2 +1,2 @@
-The input num is : 3
-sumOfNNumsFuntional: 6
+The input num is : 4
+24

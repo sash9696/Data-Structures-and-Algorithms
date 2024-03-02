@@ -1,2 +1,2 @@
-The input num is : 4
-24
+The input num is : 0
+1

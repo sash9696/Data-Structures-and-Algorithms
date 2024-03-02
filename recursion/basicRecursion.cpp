@@ -92,6 +92,18 @@ void factorialParameterized(int i, int result){
     factorialParameterized(i - 1, i * result);
 }
 
+int factorialFunctional(int n){
+
+    if( n == 0){
+        return 1;
+    }
+    if( n == 1){
+        return 1;
+    }
+
+    return n * factorialFunctional(n-1);
+}
+
 int main()
 {
 
@@ -108,6 +120,8 @@ int main()
     // printNTo1Back(1,n);
     // sumOfNNumsParameterized(n, 0);
     // cout <<  "sumOfNNumsFuntional: " << sumOfNNumsFuntional(n) << endl;
-    factorialParameterized(n, 1);
+    // factorialParameterized(n, 1);
+    cout << factorialFunctional(n);
+
 
 }

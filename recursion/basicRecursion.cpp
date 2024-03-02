@@ -40,20 +40,23 @@ void printNTo1(int i, int n)
     printNTo1(i, n - 1);
 }
 
-void print1ToNBack(int i, int n){
+void print1ToNBack(int i, int n)
+{
 
-
-    if(i < 1){
+    if (i < 1)
+    {
         return;
     }
 
     print1ToNBack(i - 1, n);
-    cout << i << endl; 
+    cout << i << endl;
 }
 
-void printNTo1Back(int i , int n){
+void printNTo1Back(int i, int n)
+{
 
-    if( i > n){
+    if (i > n)
+    {
         return;
     }
 
@@ -61,30 +64,34 @@ void printNTo1Back(int i , int n){
     cout << i << endl;
 }
 
-void sumOfNNumsParameterized(int i, int sum){
+void sumOfNNumsParameterized(int i, int sum)
+{
 
-    if(i < 1){
+    if (i < 1)
+    {
         cout << sum << endl;
-        return ;
+        return;
     }
 
-    sumOfNNumsParameterized(i -1 , sum + i);
-
+    sumOfNNumsParameterized(i - 1, sum + i);
 }
 
-int sumOfNNumsFuntional(int n){
+int sumOfNNumsFuntional(int n)
+{
 
-    if (n == 0 ){
+    if (n == 0)
+    {
         return 0;
     }
 
     return n + sumOfNNumsFuntional(n - 1);
-
 }
 
-void factorialParameterized(int i, int result){
+void factorialParameterized(int i, int result)
+{
 
-    if(i < 2){
+    if (i < 2)
+    {
         cout << result << endl;
         return;
     }
@@ -92,22 +99,45 @@ void factorialParameterized(int i, int result){
     factorialParameterized(i - 1, i * result);
 }
 
-int factorialFunctional(int n){
+int factorialFunctional(int n)
+{
 
-    //TC => O(n)
-    //SC => stack space => O(n)
-    if( n == 0){
+    // TC => O(n)
+    // SC => stack space => O(n)
+    if (n == 0)
+    {
         return 1;
     }
-    if( n == 1){
+    if (n == 1)
+    {
         return 1;
     }
 
-    return n * factorialFunctional(n-1);
+    return n * factorialFunctional(n - 1);
 }
 
-void  reverseAnArrayRecursionTwoPointers(){
+void reverseAnArrayRecursionTwoPointers()
+{
+}
 
+void reverseAnArrayRecursionTwoPointers(int i, int arr[], int n)
+{
+
+    int left = i;
+    int right = n - 1;
+
+    if (left > right)
+    {
+        return;
+    }
+
+    int temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+    i++;
+    n--;
+
+    reverseAnArrayRecursionTwoPointers(i, arr, n);
 }
 
 int main()
@@ -121,9 +151,21 @@ int main()
 
     int arr[n];
 
-    for(int x : arr){
-        cout << x << endl;
+    // for(int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++){
+    //     int a;
+    //     cin >> a;
+    //     arr[i] = a;
+    // }
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr[i];
     }
+    cout << "Input array: " << endl;
+    for (int x : arr)
+    {
+        cout << x << " ";
+    }
+    cout << endl;
 
     // printName(1,n);
     // print1ToN(1,n);
@@ -135,7 +177,11 @@ int main()
     // factorialParameterized(n, 1);
     // cout << factorialFunctional(n);
 
-    reverseAnArrayRecursionTwoPointers();
+    reverseAnArrayRecursionTwoPointers(0, arr, n);
+    cout << "Reverse array: " << endl;
 
-
+    for (int x : arr)
+    {
+        cout << x << " ";
+    }
 }

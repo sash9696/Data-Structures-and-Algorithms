@@ -193,6 +193,9 @@ int nthFibonnaciLoop(int n){
 
 int nthFibonnaciRecursive(int n){
 
+    //for every recursive call
+    //n - 1 and n-2 is also called i.e min 2 function calls
+    // so approximately TC => O(2^n)
     if( n <= 1) return n;
 
     return nthFibonnaciRecursive(n - 1) + nthFibonnaciRecursive(n - 2);

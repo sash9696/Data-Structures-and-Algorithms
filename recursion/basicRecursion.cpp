@@ -152,32 +152,47 @@ void reverseAnArrayRecursionSinglePointer(int i, int arr[], int n)
 
     reverseAnArrayRecursionSinglePointer(i + 1, arr, n);
 }
+
+bool isStringPalindromeFunctional(int i, string &n){
+
+    if(i >= n.size()/2){
+        return true;
+    }
+
+    if(n[i] != n[n.size() - i -1]){
+        return false;
+    }
+
+    return isStringPalindromeFunctional(i+1, n);
+
+
+}
 int main()
 {
 
-    int n;
+    // int n;
 
-    cin >> n;
+    // cin >> n;
 
-    cout << "The input num is : " << n << endl;
+    // cout << "The input num is : " << n << endl;
 
-    int arr[n];
+    // int arr[n];
 
     // for(int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++){
     //     int a;
     //     cin >> a;
     //     arr[i] = a;
     // }
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
-    cout << "Input array: " << endl;
-    for (int x : arr)
-    {
-        cout << x << " ";
-    }
-    cout << endl;
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+    // cout << "Input array: " << endl;
+    // for (int x : arr)
+    // {
+    //     cout << x << " ";
+    // }
+    // cout << endl;
 
     // printName(1,n);
     // print1ToN(1,n);
@@ -190,12 +205,22 @@ int main()
     // cout << factorialFunctional(n);
 
     // reverseAnArrayRecursionTwoPointers(0, arr, n);
-    reverseAnArrayRecursionSinglePointer(0, arr, n);
+    // reverseAnArrayRecursionSinglePointer(0, arr, n);
 
-    cout << "Reverse array: " << endl;
+    // cout << "Reverse array: " << endl;
 
-    for (int x : arr)
-    {
-        cout << x << " ";
-    }
+    // for (int x : arr)
+    // {
+    //     cout << x << " ";
+    // }
+
+
+    string n;
+
+    cin >> n;
+
+    cout << "The input string is : " << n << endl;
+
+   cout<< isStringPalindromeFunctional(0, n);
+
 }

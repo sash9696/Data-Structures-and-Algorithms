@@ -1,6 +1,7 @@
 
 #include <iostream>
 using namespace std;
+#include <cctype>
 
 // print name n times
 
@@ -153,32 +154,35 @@ void reverseAnArrayRecursionSinglePointer(int i, int arr[], int n)
     reverseAnArrayRecursionSinglePointer(i + 1, arr, n);
 }
 
-bool isStringPalindromeFunctional(int i, string &n){
+bool isStringPalindromeFunctional(int i, string &n)
+{
 
-    if(i >= n.size()/2){
+    if (i >= n.size() / 2)
+    {
         return true;
     }
 
-    if(n[i] != n[n.size() - i -1]){
+    if (n[i] != n[n.size() - i - 1])
+    {
         return false;
     }
 
-    return isStringPalindromeFunctional(i+1, n);
-
-
+    return isStringPalindromeFunctional(i + 1, n);
 }
 
-
-int nthFibonnaciLoop(int n){
+int nthFibonnaciLoop(int n)
+{
 
     // f(n) = f(n-1) + f(n-2)
 
-    if(n <= 1){
+    if (n <= 1)
+    {
         return n;
     }
     int last = 1;
     int slast = 1;
-    for(int i = 2; i < n; i++){
+    for (int i = 2; i < n; i++)
+    {
 
         int temp = last;
 
@@ -190,24 +194,68 @@ int nthFibonnaciLoop(int n){
     return last;
 }
 
+int nthFibonnaciRecursive(int n)
+{
 
-int nthFibonnaciRecursive(int n){
-
-    //for every recursive call
-    //n - 1 and n-2 is also called i.e min 2 function calls
-    // so approximately TC => O(2^n)
-    if( n <= 1) return n;
+    // for every recursive call
+    // n - 1 and n-2 is also called i.e min 2 function calls
+    //  so approximately TC => O(2^n)
+    if (n <= 1)
+        return n;
 
     return nthFibonnaciRecursive(n - 1) + nthFibonnaciRecursive(n - 2);
+}
+
+bool isStringPalindromeLoop(string &s)
+{
+
+    // Remove non-alphanumeric characters and convert to lowercase
+    string cleanString;
+    for (char c : s)
+    {
+        if (isalnum(c))
+        {
+            cleanString += tolower(c);
+        }
+    }
+    if (cleanString.empty())
+    {
+        return true;
+    }
+
+    for (char x : cleanString)
+    {
+        cout << x;
+    }
+        cout << endl;
+
+    int n = cleanString.length();
+
+    cout << "n: " << n;
+
+    cout << endl;
+
+    int i = 0;
+
+    while (i <= n / 2)
+    {
+
+        if (cleanString[i] != cleanString[n - i - 1])
+        {
+            return false;
+        }
+        i++;
+    }
+    return true;
 }
 int main()
 {
 
-    int n;
+    // int n;
 
-    cin >> n;
+    // cin >> n;
 
-    cout << "The input num is : " << n << endl;
+    // cout << "The input num is : " << n << endl;
 
     // int arr[n];
 
@@ -247,19 +295,19 @@ int main()
     //     cout << x << " ";
     // }
 
+    // string n;
 
-//     string n;
+    // cin >> n;
 
-//     cin >> n;
+    // cout << "The input string is : " << n << endl;
 
-//     cout << "The input string is : " << n << endl;
+    //    cout<< isStringPalindromeFunctional(0, n);
 
-//    cout<< isStringPalindromeFunctional(0, n);
+    //    cout<< nthFibonnaciLoop(n);
+    //    cout<< nthFibonnaciRecursive(n);
 
-//    cout<< nthFibonnaciLoop(n);
-   cout<< nthFibonnaciRecursive(n);
+    string n = " ";
+    cout << "isPalindrome: "<< isStringPalindromeLoop(n);
 
-
-return 0;
-
+    return 0;
 }

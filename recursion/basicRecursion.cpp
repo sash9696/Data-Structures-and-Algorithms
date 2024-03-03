@@ -167,14 +167,36 @@ bool isStringPalindromeFunctional(int i, string &n){
 
 
 }
+
+
+int nthFibonnaciLoop(int n){
+
+    // f(n) = f(n-1) + f(n-2)
+
+    if(n <= 1){
+        return n;
+    }
+    int last = 1;
+    int slast = 1;
+    for(int i = 2; i < n; i++){
+
+        int temp = last;
+
+        last = last + slast;
+
+        slast = temp;
+    }
+
+    return last;
+}
 int main()
 {
 
-    // int n;
+    int n;
 
-    // cin >> n;
+    cin >> n;
 
-    // cout << "The input num is : " << n << endl;
+    cout << "The input num is : " << n << endl;
 
     // int arr[n];
 
@@ -215,12 +237,16 @@ int main()
     // }
 
 
-    string n;
+//     string n;
 
-    cin >> n;
+//     cin >> n;
 
-    cout << "The input string is : " << n << endl;
+//     cout << "The input string is : " << n << endl;
 
-   cout<< isStringPalindromeFunctional(0, n);
+//    cout<< isStringPalindromeFunctional(0, n);
+
+   cout<< nthFibonnaciLoop(n);
+
+return 0;
 
 }

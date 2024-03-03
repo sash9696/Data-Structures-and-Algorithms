@@ -1,2 +1,2 @@
-The input string is : madam
-1
+The input num is : 6
+8

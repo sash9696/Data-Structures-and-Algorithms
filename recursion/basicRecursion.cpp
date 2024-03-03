@@ -189,6 +189,14 @@ int nthFibonnaciLoop(int n){
 
     return last;
 }
+
+
+int nthFibonnaciRecursive(int n){
+
+    if( n <= 1) return n;
+
+    return nthFibonnaciRecursive(n - 1) + nthFibonnaciRecursive(n - 2);
+}
 int main()
 {
 
@@ -245,7 +253,9 @@ int main()
 
 //    cout<< isStringPalindromeFunctional(0, n);
 
-   cout<< nthFibonnaciLoop(n);
+//    cout<< nthFibonnaciLoop(n);
+   cout<< nthFibonnaciRecursive(n);
+
 
 return 0;
 

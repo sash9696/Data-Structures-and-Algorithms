@@ -26,6 +26,11 @@ int main(){
         mpp[arr[i]]++;
     }
 
+    for(auto it : mpp){
+
+        cout << it.first << "-> " << it.second << endl;
+    }
+
     while (q--){
 
         int number ;

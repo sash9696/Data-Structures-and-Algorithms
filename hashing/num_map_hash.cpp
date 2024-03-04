@@ -22,6 +22,10 @@ int main(){
 
     map<int,int> mpp;
 
+    //Time complexity for both
+    //storing and fetching is log(N) for all case
+    //worst best avg case
+
     for (int i = 0;  i < n; i++){
         mpp[arr[i]]++;
     }

@@ -16,6 +16,9 @@ int main()
 
     map<char, int> mpp;
 
+    // in this case it will not convert the
+    //char to ascii values
+
     for (int i = 0; i < s.size(); i ++){
 
         mpp[s[i]]++;

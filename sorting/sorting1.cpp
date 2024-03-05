@@ -39,6 +39,26 @@ void selectionSort(int arr[], int n)
     }
 }
 
+void bubbleSort(int arr[],int n){
+
+//opp of selection sort
+//push the max to the last by adjacent swaps
+
+//outer loop  will go from n - 1 to 1 not 0 because 1 element will be sorted can be zero but not required
+//inner loop goe from 0  n -1 then 0 to n - 2 then so on that is nothing but i
+    for (int i = n - 1; i >= 1; i--){
+
+        for(int j = 0; j <= i - 1; j++){
+
+            if(arr[j] > arr[j + 1] ){
+                swap(arr, j, j + 1);
+            }
+        }
+    }
+
+
+}
+
 int main()
 {
     int n;
@@ -54,7 +74,9 @@ int main()
 
     // algo
 
-    selectionSort(arr, n);
+    // selectionSort(arr, n);
+    bubbleSort(arr, n);
+
     for (int x : arr)
     {
         cout << x << endl;

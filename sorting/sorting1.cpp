@@ -55,6 +55,9 @@ void bubbleSort(int arr[],int n){
 //go till n2 taht means array is already sorted
 //no swaps  best case will run on O(n) if we did some optimisation
 //so lests use didswap
+
+
+//best time complexity will be O(n) if in case array already sorted
     for (int i = n - 1; i >= 1; i--){
 
         int didSwap = 0;
@@ -68,6 +71,8 @@ void bubbleSort(int arr[],int n){
         if(didSwap == 0){
             break;
         }
+        cout << "runs";
+
     }
 
 

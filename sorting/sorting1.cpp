@@ -22,6 +22,8 @@ void selectionSort(int arr[], int n)
     // to find min between a given range that is index to min index in range index -> n - 1
     // we need inner loop to iterate and get min
 
+//time compexity will be O(n2) in all cases best avg or worst
+
     for (int i = 0; i < n - 2; i++)
     {
 
@@ -46,13 +48,25 @@ void bubbleSort(int arr[],int n){
 
 //outer loop  will go from n - 1 to 1 not 0 because 1 element will be sorted can be zero but not required
 //inner loop goe from 0  n -1 then 0 to n - 2 then so on that is nothing but i
+
+//time compexity will be O(n2) in most cases worst and avg
+
+//in case of if u have an array like 2 3 5 15 20 the we dont
+//go till n2 taht means array is already sorted
+//no swaps  best case will run on O(n) if we did some optimisation
+//so lests use didswap
     for (int i = n - 1; i >= 1; i--){
 
+        int didSwap = 0;
         for(int j = 0; j <= i - 1; j++){
 
             if(arr[j] > arr[j + 1] ){
                 swap(arr, j, j + 1);
+                didSwap = 1;
             }
+        }
+        if(didSwap == 0){
+            break;
         }
     }
 

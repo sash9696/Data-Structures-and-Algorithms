@@ -52,3 +52,20 @@ int main() {
         cout << num << " is not a prime number." << endl;
     return 0;
 }
+#include <iostream>
+using namespace std;
+
+double calculateAverage(int arr[], int size) {
+    double sum = 0.0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+    return sum / size;
+}
+
+int main() {
+    int arr[] = {5, 10, 15, 20, 25};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    cout << "Average of numbers in the array: " << calculateAverage(arr, size) << endl;
+    return 0;
+}

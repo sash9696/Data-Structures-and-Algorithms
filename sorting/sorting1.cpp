@@ -80,9 +80,21 @@ void bubbleSort(int arr[],int n){
 
 void insertionSort(int arr[], int n){
 
+//take the element and place it in  its correct position
+    //O(n2) worst case and avg case TC
+    //54321
+
+    //Best case => 12345 O(n)
+    //because no swaps happen
     for(int i = 0; i < n - 1; i++){
+            //start from element at first index 0 to n - 1
+
 
         int j = i;
+
+        //going backwards uptil j > 0
+        //beacuse when j reaches 2nd position
+        //it will be comparing with j - 1 that is 1st position
 
         while (j >0 && arr[j-1] > arr[j]){
             swap(arr, j - 1, j);
